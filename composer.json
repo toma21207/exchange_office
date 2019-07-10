@@ -1,0 +1,19 @@
+{
+    "name": "toma/exchange-office",
+    "description": "Online exchange-office",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Tomislav Kukic",
+            "email": "kukic.toma@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./"
+        }
+    }
+}
