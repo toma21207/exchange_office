@@ -162,3 +162,14 @@ thead, tbody, td, th {
 	box-shadow: 1px 1px 2px #363636;
 	transition: all .3s ease;
 }
+
+.message_box_button.calculate_button {
+	margin: 0;
+}
+
+.currency_amount_box {
+	display: flex;
+	justify-content: space-evenly;
+	vertical-align: bottom;
+	padding: 20px 10px; 
+}

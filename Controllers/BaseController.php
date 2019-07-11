@@ -7,7 +7,10 @@
  
 namespace Inc\Controllers;
 
-use \Inc\Controllers\CurrencyController;
+use Inc\Controllers\CurrencyController;
+use Inc\Controllers\SurchargeController;
+use Inc\Controllers\DiscountController;
+use Inc\Controllers\ExchangeRateController;
 
 /** 
  * This controller is used to controll most basic stuff in application
@@ -41,10 +44,15 @@ class BaseController
 
 	public function getContent() 
 	{
-		$currencyController = CurrencyController::getInstance();
+		$currencyController     = CurrencyController::getInstance();
 		$exchangeRateController = ExchangeRateController::getInstance();
-		$currencies = $currencyController->loadCurrencies();
+		$surchargeController    = SurchargeController::getInstance();
+		$discountController     = DiscountController::getInstance();
+
+		$currencies             = $currencyController->loadCurrencies();
 		$exchangeRateController->loadExchangeRates();
+		$surchargeController->loadSurcharges();
+		$discountController->loadDiscounts();
 
 		// Print content template
 		require( $_SERVER['DOCUMENT_ROOT'] . '/Views/Content.php' );

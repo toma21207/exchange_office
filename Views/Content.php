@@ -28,9 +28,15 @@
 				</td>
 				<?php
 				$exchangeRate = $exchangeRateController->getExchangeRateById(
-							$currencyController->getBaseCurrencyID(),
-							$currency->data['id']
-						);
+						$currencyController->getBaseCurrencyID(),
+						$currency->data['id']
+					);
+				$surcharge = $surchargeController->getSurchargeByCurrencyID(
+						$currency->data['id']
+					);
+				$discount = $discountController->getDiscountByCurrencyID(
+						$currency->data['id']
+					);
 				?>
 				<td class="currencies_table_data data_type_number">
 					<?php 
@@ -40,7 +46,9 @@
 				<td class="currencies_table_data">
 					<div class="action_button" 
 						btn-data-id="<?php echo $currency->data['id']; ?>"
-						btn-data-rate="<?php echo $exchangeRate->data['exchange_rate'] ?>" >
+						btn-data-rate="<?php echo $exchangeRate->data['exchange_rate']; ?>" 
+						btn-data-surcharge="<?php echo $surcharge->data['amount']; ?>"
+						btn-data-discount="<?php echo $discount == null ? 0 : $discount->data['amount']; ?>">
 						Purchase
 					</div>
 				</td>
