@@ -23,6 +23,8 @@ $(function() {
 	$(".action_button").click(function() {
 		$('.message_box_background_wrapper').removeClass('hidden');
 		calculateData['id']        = $(this).attr('btn-data-id');
+		calculateData['name']      = $(this).attr('btn-data-name');
+		calculateData['amount']	   = 0;
 		calculateData['rate']      = Number($(this).attr('btn-data-rate'));
 		calculateData['surcharge'] = Number($(this).attr('btn-data-surcharge'));
 		calculateData['discount']  = Number($(this).attr('btn-data-discount'));
@@ -43,7 +45,11 @@ $(function() {
 		$(this).addClass('hidden');
 	});
 
+	$('.cancel_button').click(function() {
+		$('.message_box_background_wrapper').addClass('hidden');
+	});
+
 	$('.calculate_button').click(function(){
-		console.log($(this).attr('btn-data-id'));
+		
 	});
 });

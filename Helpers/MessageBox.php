@@ -31,7 +31,7 @@
 		</div>
 		<div class="message_box_button_bar">
 			<div class="message_box_button ok_button hidden">Confirm</div>
-			<div class="message_box_button cancel_button hidden">Cancel</div>
+			<div class="message_box_button cancel_button">Cancel</div>
 			<div class="message_box_button yes_button hidden">Yes</div>
 			<div class="message_box_button no_button hidden">No</div>
 		</div>

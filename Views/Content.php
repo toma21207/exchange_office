@@ -46,6 +46,7 @@
 				<td class="currencies_table_data">
 					<div class="action_button" 
 						btn-data-id="<?php echo $currency->data['id']; ?>"
+						btn-data-name="<?php echo $currency->data['short_name']; ?>"
 						btn-data-rate="<?php echo $exchangeRate->data['exchange_rate']; ?>" 
 						btn-data-surcharge="<?php echo $surcharge->data['amount']; ?>"
 						btn-data-discount="<?php echo $discount == null ? 0 : $discount->data['amount']; ?>">
